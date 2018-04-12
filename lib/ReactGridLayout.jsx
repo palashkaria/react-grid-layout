@@ -532,7 +532,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       containerPadding,
       rowHeight,
       maxRows,
-      useCSSTransforms
+      useCSSTransforms,
+      axis
     } = this.props;
 
     // {...this.state.activeDrag} is pretty slow, actually
@@ -553,6 +554,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         isDraggable={false}
         isResizable={false}
         useCSSTransforms={useCSSTransforms}
+        axis={axis}
       >
         <div />
       </GridItem>
